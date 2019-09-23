@@ -3,8 +3,7 @@
 FROM ubuntu:18.04
 MAINTAINER Mike Bee mbonsign@gmail.com
 
-ENV DEBIAN_FRONTEND=noninteractiveRUN apt-get update && apt-get install -y --no-install-recommends apt-utils
-
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y update
 RUN apt-get install -y --no-install-recommends apt-utils
 RUN apt-get -y install wget
