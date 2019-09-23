@@ -3,10 +3,10 @@
 FROM ubuntu:18.04
 MAINTAINER Mike Bee mbonsign@gmail.com
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractiveRUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 
 RUN apt-get -y update
-RUN apt-get -y install apt-utils
+RUN apt-get install -y --no-install-recommends apt-utils
 RUN apt-get -y install wget
 RUN apt-get -y install ca-certificates
 RUN apt-get -y install bc
